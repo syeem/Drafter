@@ -34,6 +34,15 @@ public class Hero {
         this.traits = traits;
     }
 
+    public String GetString() {
+        String str = "";
+        for (Trait t : traits) {
+            str += t.toString();
+            str += " ";
+        }
+        return str;
+    }
+
     public static List<Hero> CreateHeroes() {
         List<Hero> heroes = new ArrayList<>();
 
@@ -997,7 +1006,6 @@ public class Hero {
         h.traits = t;
         heroes.add(h);
 
-        
         //Z
         h = new Hero();
         h.name = "Zeus";
